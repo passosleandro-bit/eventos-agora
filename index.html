@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, 
+initial-scale=1.0">
+  <title>Painel de Eventos - Ágora</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #0c0c0c;
+      color: white;
+      margin: 0;
+      padding: 40px;
+    }
+    h1 { text-align: center; margin-bottom: 30px; }
+    .evento {
+      background: #1a1a1a;
+      margin-bottom: 20px;
+      padding: 20px;
+      border-radius: 10px;
+    }
+    .titulo { font-size: 1.4em; font-weight: bold; }
+    .data, .local { color: #aaa; }
+  </style>
+</head>
+<body>
+  <h1>Próximos Eventos no Ágora Tech Park</h1>
+  <div id="lista-eventos">Carregando eventos...</div>
+
+  <script>
+    async function carregarEventos() {
+      try {
+        const resposta = await fetch('eventos.json');
+        const eventos = await resposta.json();
+        const container = document.getElementById('lista-eventos');
+        container.innerHTML = '';
+
+        eventos.forEach(e => {
+          const div = document.createElement('div');
+          div.className = 'evento';
+          div.innerHTML = `
+            <div class="titulo">${e.titulo}</div>
+            <div class="data">${e.data}</div>
+            <div class="local">${e.local}</div>
+          `;
+          container.appendChild(div);
+        });
+      } catch (err) {
+        document.getElementById('lista-eventos').innerText = 'Erro 
+ao carregar eventos.';
+      }
+    }
+
+    carregarEventos();
+    setInterval(carregarEventos, 1800000); // Atualiza a cada 30 
+min
+  </script>
+</body>
+</html>
+
