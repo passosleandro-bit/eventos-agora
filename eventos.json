@@ -1,14 +1,32 @@
 [
   {
-    "titulo": "Mulher Empondera Business",
-    "data": "sáb, 25 outubro | 14:00",
-    "local": "Agora tech Park",
-    "link": "https://agoratechpark.com.br/eventos/institucional/mulher-empondera-business/"
+    "titulo": "Simpósio SAE BRASIL de IA na Indústria da Mobilidade – 2025",
+    "data": "qua, 05 novembro | 08:00",
+    "local": "Ágora Tech Park / Auditório - Prédio HUB",
+    "link": "https://agoratechpark.com.br/eventos/inteligencia-artificial/simposio-sae-brasil-de-ia-na-industria-da-mobilidade-2025/"
   },
   {
     "titulo": "3° NurseBiz",
-    "data": "ter, 11 novembro | 22:00",
-    "local": "Auditório Ágora",
+    "data": "qui, 06 novembro | 18:00",
+    "local": "Ágora Tech Park / Auditório - Prédio HUB",
     "link": "https://agoratechpark.com.br/eventos/institucional/3-nursebiz/"
+  },
+  {
+    "titulo": "Sustentarq! Desmistificando a Arquitetura Sustentável",
+    "data": "ter, 11 novembro | 18:00",
+    "local": "Ágora Tech Park / Auditório - Prédio HUB",
+    "link": "https://agoratechpark.com.br/eventos/inovacao/sustentarq-desmistificando-a-arquitetura-sustentavel/"
+  },
+  {
+    "titulo": "Inovação e Futuro da Indústria",
+    "data": "qui, 13 novembro | 19:00",
+    "local": "Ágora Tech Park / Auditório - Prédio HUB",
+    "link": "https://agoratechpark.com.br/eventos/inovacao/inovacao-e-futuro-da-industria/"
+  },
+  {
+    "titulo": "Conexão Indtech 2025",
+    "data": "ter, 18 novembro | 07:30",
+    "local": "Ágora Tech Park / Auditório / Square / Sala de Treinamento - Prédio HUB",
+    "link": "https://agoratechpark.com.br/eventos/tecnologia/conexao-indtech-2025/"
   }
 ]

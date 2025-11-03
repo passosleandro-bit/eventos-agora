@@ -4,14 +4,18 @@ import fs from 'fs';
 
 export async function scrapeEventos() {
   const url = 'https://agoratechpark.com.br/eventos/';
+
+  // Usa o Chrome do Mac (caminho local)
   const browser = await puppeteer.launch({
     headless: true,
-    executablePath: '/Applications/Google Chrome.app/Contents/MacOS/Google Chrome'
+    executablePath: '/Applications/Google Chrome.app/Contents/MacOS/Google Chrome',
   });
 
   const page = await browser.newPage();
   await page.goto(url, { waitUntil: 'networkidle2' });
+
   await autoScroll(page);
+
   await page.waitForSelector('div.eventos div.evento', { timeout: 30000 });
 
   const eventos = await page.evaluate(() => {
@@ -44,6 +48,7 @@ export async function scrapeEventos() {
 
   fs.writeFileSync('eventos.json', JSON.stringify(unicos, null, 2), 'utf8');
   console.log(`✅ Extraídos ${unicos.length} eventos únicos.`);
+
   await browser.close();
 }
 
